@@ -1,0 +1,85 @@
+.pattern {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1000;
+
+    background-color: #fbfbfb;
+    opacity: 0.3;
+    background-image: radial-gradient(#000000 0.65px, #fbfbfb 0.65px);
+    background-size: 13px 13px;
+}
+
+
+.card,
+.accordion,
+.alert,
+.table {
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.card a {
+    border: none;
+}
+
+.card{
+    margin-bottom: 10px;
+}
+
+.widget {
+    color: black;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+table {
+    margin-bottom: 0 !important;
+}
+
+.accordion-body {
+    padding: 0;
+    margin: 0;
+}
+
+.pdtop {
+    padding-top: 25px;
+}
+
+.pdbot {
+    padding-bottom: 25px;
+}
+
+.interval-error {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.interval-error img {
+    margin-bottom: 10px;
+}
+
+.profile-picture img {
+    object-fit: cover;
+    max-width: 150px;
+    -webkit-filter: drop-shadow(0px 0px 3px #222);
+    filter: drop-shadow(0px 0px 3px #222);
+}
+
+.profile-picture {
+    margin: auto;
+    display: block;
+}
+
+.maxwidth-700 {
+    max-width: 700px;
+}
+
+.maxwidth-800 {
+    max-width: 800px;
+}
+
+.maxwidth-900 {
+    max-width: 900px;
+}
