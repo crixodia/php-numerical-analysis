@@ -26,7 +26,7 @@ on:
 
 env:
   AZURE_WEBAPP_NAME: numericalanalysis    # set this to your application's name
-  AZURE_WEBAPP_PACKAGE_PATH: 'src/'      # set this to the path to your web app project, defaults to the repository root
+  AZURE_WEBAPP_PACKAGE_PATH: './src/'      # set this to the path to your web app project, defaults to the repository root
   PHP_VERSION: '8.1'                  # set this to the PHP version to use
 
 permissions:
@@ -96,4 +96,4 @@ jobs:
         with:
           app-name: ${{ env.AZURE_WEBAPP_NAME }}
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-          package: .
+          package: AZURE_WEBAPP_PACKAGE_PATH
