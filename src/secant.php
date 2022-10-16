@@ -9,12 +9,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Búsqueda de raíces - Cristian Bastidas</title>
+    <title>Búsqueda de raíces: Secante, Bisección, Newton-Raphson</title>
 
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/custom.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom.css">
 
-    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
@@ -24,28 +24,12 @@
     <div class="pattern"></div>
     <div class="container">
 
-        <div class="container about pdtop" style="max-width: 700px;">
-            <div class="row">
-                <div class="col-auto profile-picture pdbot">
-                    <img name="profile-picture-img" src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Escudo_de_la_Escuela_Polit%C3%A9cnica_Nacional.png" width="150px">
-                </div>
-                <div class="col-lg text-center">
-                    <h5>Escuela Politécnica Nacional</h5>
-                    <h6>Facultad de Ingeniería en Sistemas</h6>
-                    <h6>Ingeniería en Ciencias de la Computación</h6>
-                    <br>
-                    <p class="text-justify">
-                        <b>Nombre: </b>Cristian Bastidas &nbsp;&nbsp;&nbsp;<b>Asignatura: </b> Métodos Numéricos
-                    </p>
-                </div>
-            </div>
-        </div>
         <div class="container pdtop maxwidth-700">
             <div class="card bg-light">
-                <h5 class="card-header" style="background-color: #e7f1ff;">Búsqueda de Raíces</h5>
+                <h5 class="card-header" style="background-color: #e7f1ff;"><a href="index.php"><img src="assets/left.png" width="24px"></a> Búsqueda de raíces: Secante, Bisección, Newton-Raphson</h5>
 
                 <div class="card-body">
-                    <form action="index.php" method="GET" class="font-monospace">
+                    <form action="secant.php" method="GET" class="font-monospace">
                         <div class="form-group">
                             <div class="row">
                                 <label class="col-auto col-form-label" for="punto_interes">Función</label>
@@ -274,7 +258,9 @@
             } ?>
         </div>
     </div>
-    <h6 class="text-center text-muted pdtop">Tarea 6 - Cristian Bastidas</h6>
+    <br>
+    <h6 class="text-center text-muted"><a href="https://github.com/crixodia?tab=repositories" target="_blank">Cristian Bastidas</a></h6>
+    <br>
 </body>
 
 </html>

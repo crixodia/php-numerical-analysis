@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Integración Numérica - Cristian Bastidas</title>
+    <title>Integración Numérica: Regla del Trapecio</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/custom.css">
     <script src="js/bootstrap.bundle.min.js"></script>
@@ -20,7 +20,7 @@
     <div class="container">
         <div class="container pdtop maxwidth-700">
             <div class="card bg-light">
-            <h5 class="card-header" style="background-color: #fff3cd;"><a href="index.php"><img src="assets/left.png" width="24px"></a> Integración Numérica: Regla del Trapecio</h5>
+                <h5 class="card-header" style="background-color: #fff3cd;"><a href="index.php"><img src="assets/left.png" width="24px"></a> Integración Numérica: Regla del Trapecio</h5>
 
                 <div class="card-body">
                     <form action="./integrate_trapeze.php" method="GET" class="font-monospace">

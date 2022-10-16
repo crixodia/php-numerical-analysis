@@ -85,6 +85,18 @@
                 </a>
             </div>
 
+            <div class="card">
+                <a href="secant.php" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+                    <img src="assets/secant.svg" alt="twbs" width="64" height="64" class="flex-shrink-0">
+                    <div class="d-flex gap-2 w-100 justify-content-between">
+                        <div>
+                            <h6 class="mb-0">Búsqueda de raíces: Secante, Bisección, Newton-Raphson</h6>
+                            <p class="mb-0 opacity-75">Búsqueda de raíces por los métodos Newton-Raphson, Secante, Bisección, Secante-Bisección. Se requiere una función, un intervalo de análisis, una tolerancia y el número de subintervalos a analizar.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
         </div>
     </div>
 </body>

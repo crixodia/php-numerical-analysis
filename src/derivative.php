@@ -21,7 +21,7 @@
 
         <div class="container pdtop maxwidth-700">
             <div class="card bg-light">
-                
+
                 <h5 class="card-header" style="background-color: #cfe2ff;"><a href="index.php"><img src="assets/left.png" width="24px"></a> Diferenciación Numérica</h5>
 
                 <div class="card-body">
