@@ -66,7 +66,8 @@
                     <div class="d-flex gap-2 w-100 justify-content-between">
                         <div>
                             <h6 class="mb-0">Búsqueda de raíces: Bisección</h6>
-                            <p class="mb-0 opacity-75">Integración numérica por la regla de Simpson dado el límite inferior, superior una tolerancia y el número de trapecios inicial.</p>
+                            <p class="mb-0 opacity-75">Búsqueda de raíces por el método de Bisección
+                                dada una función, un intervalo de análisis, una tolerancia y el número de subintervalos a analizar.</p>
                         </div>
                     </div>
                 </a>
@@ -78,7 +79,7 @@
                     <div class="d-flex gap-2 w-100 justify-content-between">
                         <div>
                             <h6 class="mb-0">Búsqueda de raíces: Newton-Raphson</h6>
-                            <p class="mb-0 opacity-75">Integración numérica por la regla de Simpson dado el límite inferior, superior una tolerancia y el número de trapecios inicial.</p>
+                            <p class="mb-0 opacity-75">Búsqueda de raíces por el método de Newton-Raphson dada una función, un intervalo de análisis, una tolerancia y el número de subintervalos a analizar.</p>
                         </div>
                     </div>
                 </a>
