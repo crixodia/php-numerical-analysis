@@ -60,6 +60,30 @@
                 </a>
             </div>
 
+            <div class="card">
+                <a href="bisection.php" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+                    <img src="assets/bisection.png" alt="twbs" width="64" height="64" class="flex-shrink-0">
+                    <div class="d-flex gap-2 w-100 justify-content-between">
+                        <div>
+                            <h6 class="mb-0">Búsqueda de raíces: Bisección</h6>
+                            <p class="mb-0 opacity-75">Integración numérica por la regla de Simpson dado el límite inferior, superior una tolerancia y el número de trapecios inicial.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card">
+                <a href="newton-raphson.php" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+                    <img src="assets/newton-raphson.jpeg" alt="twbs" width="64" height="64" class="flex-shrink-0">
+                    <div class="d-flex gap-2 w-100 justify-content-between">
+                        <div>
+                            <h6 class="mb-0">Búsqueda de raíces: Newton-Raphson</h6>
+                            <p class="mb-0 opacity-75">Integración numérica por la regla de Simpson dado el límite inferior, superior una tolerancia y el número de trapecios inicial.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
         </div>
     </div>
 </body>
