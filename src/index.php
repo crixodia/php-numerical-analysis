@@ -97,6 +97,18 @@
                 </a>
             </div>
 
+            <div class="card">
+                <a href="integrate_gauss_quadrature.php" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+                    <img src="assets/legendre.png" alt="twbs" width="64" height="64" class="flex-shrink-0">
+                    <div class="d-flex gap-2 w-100 justify-content-between">
+                        <div>
+                            <h6 class="mb-0">Integración numérica: Cuadratura de Gauss</h6>
+                            <p class="mb-0 opacity-75">Integración numérica por cuadratura de Gauss dado el límite inferior, superior una tolerancia y el grado del polinomio.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
         </div>
     </div>
 </body>

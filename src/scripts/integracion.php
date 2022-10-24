@@ -6,7 +6,19 @@
  */
 
 //Funciones por default y parser de funciones
-include('funciones.php');
+include('raices.php');
+
+
+function get_legendre(int $n)
+{
+    if ($n == 0) {
+        return "1";
+    } else if ($n == 1) {
+        return "x";
+    } else {
+        return "(" . (2 * $n - 1) . "*x*" . get_legendre($n - 1) . "-" . ($n - 1) . "*" . get_legendre($n - 2) . ")/" . $n;
+    }
+}
 
 //Integral por la regla del trapecio
 function i_trapecio($f, float $a, float $b, float $n)
@@ -84,7 +96,32 @@ function i_iterative_simpson($f, float $a, float $b, float $error, float $n = 2)
     return $table;
 }
 
-//TEST
-/*echo i_simpson(function ($x) {
-    return exp($x);
-}, 0, 6, 6);*/
+
+function gauss_quadrature($f, float $a, float $b, int $n, float $tolerance = 1e-10)
+{
+    $table = array();
+    $legendre = MakeFunction(get_legendre($n));
+    $roots = interval_bisection_roots($legendre, -1, 1, $n, $tolerance);
+    $sum = 0;
+    $legendre_last = MakeFunction(get_legendre($n + 1));
+    for ($i = 0; $i < count($roots); $i++) {
+        $div = (($n + 1) * d_iterative_value($legendre, $roots[$i], 1, $tolerance) * $legendre_last($roots[$i]));
+        $w = -2 / $div;
+        $x = ($roots[$i] * ($b - $a) / 2) + ($b + $a) / 2;
+        $sum += $f($x) * $w;
+        $table[] = array($i, $w, $x, $sum, (($b - $a) / 2) * $sum);
+    }
+    return array((($b - $a) / 2) * $sum, $table);
+}
+
+function gauss_quadrature_iterative($f, float $a, float $b, int $n,  float $tolerance = 1e-10)
+{
+    $table = array();
+    $k = 1;
+    do {
+        $row = gauss_quadrature($f, $a, $b, $k, $tolerance);
+        $table[] = array(get_legendre($k), $row[1]);
+        $k++;
+    } while ($k <= $n);
+    return $table;
+}

@@ -90,8 +90,7 @@ function newton_raphson($f, float $x_0, int $max, float $tolerance = 1e-15)
     $x = $x_0;
     $k = 0;
     do {
-
-        $xnext = $x - $f($x) / d_iterative_value($f, $x, 1e-5, $tolerance);;
+        $xnext = $x - $f($x) / d_iterative_value($f, $x, 1e-5, $tolerance);
         $error = $xnext == 0 ? 0 : abs($xnext - $x) / abs($xnext);
 
         $table[] = array($k, $x, $error, $xnext, $f($xnext));
@@ -107,7 +106,7 @@ function newton_raphson($f, float $x_0, int $max, float $tolerance = 1e-15)
  * Método de newton para subintervalos de tamaño n entre a y b
  * Devuelve un array de intervalos junto a su respectivo array de las iteraciones.
  */
-function interval_newton($f, float $a, float $b, int $n, float $tolerance = 1e-15)
+function interval_newton($f, float $a, float $b, int $n, float $tolerance = 1e-10)
 {
     //Obtiene n intervalos entre a y b
     $intervals = get_intervals($a, $b, $n);
@@ -123,6 +122,26 @@ function interval_newton($f, float $a, float $b, int $n, float $tolerance = 1e-1
         $data[] = array($interval, $newton);
     }
     return $data;
+}
+
+function interval_newton_roots($f, float $a, float $b, int $n, float $tolerance = 1e-10)
+{
+    $roots = array();
+    $table = interval_bisection($f, $a, $b, $n, $tolerance);
+    foreach ($table as $interval_table) {
+        $roots[] = $interval_table[1][count($interval_table[1]) - 1][3];
+    }
+    return $roots;
+}
+
+function interval_bisection_roots($f, float $a, float $b, int $n, float $tolerance = 1e-10)
+{
+    $roots = array();
+    $table = interval_newton($f, $a, $b, $n, $tolerance);
+    foreach ($table as $interval_table) {
+        $roots[] = $interval_table[1][count($interval_table[1]) - 1][3];
+    }
+    return $roots;
 }
 
 /**
