@@ -22,7 +22,7 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 
-    <script id="MathJax-script" async src="js/tex-mml-chtml.js"></script>
+    <script id="MathJax-script" async src="js/mathjax/tex-mml-chtml.js"></script>
 </head>
 
 <body>
@@ -30,32 +30,13 @@
     <div class="pattern"></div>
     <div class="container">
 
-        <div class="container about pdtop" style="max-width: 800px;">
-            <div class="row">
-                <div class="col-auto profile-picture pdbot">
-                    <img name="profile-picture-img" src="assets/EPN.png" width="150px">
-                </div>
-                <div class="col-lg text-center">
-                    <h5>Escuela Politécnica Nacional</h5>
-                    <h6>Facultad de Ingeniería en Sistemas</h6>
-                    <h6>Ingeniería en Ciencias de la Computación</h6>
-                    <br>
-                    <p class="text-justify">
-                        <b>Nombres: </b>Andrés Albarracín, Leornardo Andrade, Cristian Bastidas, Ricardo Barros.
-                    </p>
-                    <p class="text-justify">
-                        <b>Asignatura: </b> Métodos Numéricos
-                    </p>
-                </div>
-            </div>
-        </div>
 
         <div class="container pdtop maxwidth-800">
             <div class="accordion" id="accordion_' . $i . '">
                 <div class="card bg-light">
-                    <h5 class="card-header" style="background-color: #e7f1ff;">Método de Newton Multivariable</h5>
+                    <h5 class="card-header" style="background-color: #e7f1ff;"><a href="index.php"><img src="assets/left.png" width="24px"></a> Método de Newton Multivariable</h5>
                     <div class="card-body">
-                        <form action="index.php" method="GET" class="font-monospace">
+                        <form action="multivariable_newton.php" method="GET" class="font-monospace">
                             <div class="form-group">
                                 <div class="row">
                                     <label class="col-auto col-form-label" for="punto_interes">Función escalar</label>
@@ -65,7 +46,7 @@
                                         <input id="function" name="function" placeholder="Indique un campo escalar" value=<?php if (!empty($_GET)) {
                                                                                                                                 echo $_GET["function"];
                                                                                                                             } else {
-                                                                                                                                echo "x**2+y**2+z**2";
+                                                                                                                                echo "sin(x**2)+y**2+z**2";
                                                                                                                             } ?> type="text" aria-describedby="punto_interesHelpBlock" required="required" class="form-control">
                                     </div>
                                     <!--/div-->
@@ -193,7 +174,9 @@
             <?php } ?>
         </div>
     </div>
-    <h6 class="text-center text-muted pdtop">Grupo 1 - Andrés Albarracín, Leonardo Andrade, Cristian Bastidas, Ricardo Barros</h6>
+    <br>
+    <h6 class="text-center text-muted"><a href="https://github.com/crixodia?tab=repositories" target="_blank">Cristian Bastidas</a></h6>
+    <br>
 </body>
 
 </html>
