@@ -20,27 +20,6 @@
 
     <div class="pattern"></div>
     <div class="container">
-
-        <div class="container about pdtop" style="max-width: 800px;">
-            <div class="row">
-                <div class="col-auto profile-picture pdbot">
-                    <img name="profile-picture-img" src="assets/EPN.png" width="150px">
-                </div>
-                <div class="col-lg text-center">
-                    <h5>Escuela Politécnica Nacional</h5>
-                    <h6>Facultad de Ingeniería en Sistemas</h6>
-                    <h6>Ingeniería en Ciencias de la Computación</h6>
-                    <br>
-                    <p class="text-justify">
-                        <b>Nombre: </b>Cristian Bastidas
-                    </p>
-                    <p class="text-justify">
-                        <b>Asignatura: </b> Métodos Numéricos
-                    </p>
-                </div>
-            </div>
-        </div>
-
         <div class="container pdtop maxwidth-900">
             <div class="accordion" id="accordion_' . $i . '">
                 <div class="card bg-light">
