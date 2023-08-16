@@ -30,6 +30,10 @@
 
     <div class="pattern"></div>
     <div class="container">
+<<<<<<< HEAD
+=======
+
+>>>>>>> e89c53c759cecb0b573d4a1d6792f2d915f7b410
         <div class="container pdtop maxwidth-700">
             <div class="alert alert-info d-flex align-items-center" role="alert">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">

@@ -20,7 +20,10 @@
 
     <div class="pattern"></div>
     <div class="container">
+<<<<<<< HEAD
 
+=======
+>>>>>>> e89c53c759cecb0b573d4a1d6792f2d915f7b410
         <div class="container pdtop maxwidth-900">
             <div class="accordion" id="accordion_' . $i . '">
                 <div class="card bg-light">
