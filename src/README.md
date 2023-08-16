@@ -1,2 +1,0 @@
-# splines
-Cubic splines interpolation
