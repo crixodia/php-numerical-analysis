@@ -27,8 +27,6 @@
         <div class="container pdtop maxwidth-700">
             <div class="card bg-light">
                 <h5 class="card-header" style="background-color: #e7f1ff;"><a href="index.php"><img src="assets/left.png" width="24px"></a> Búsqueda de Raíces: Bisección</h5>
-
-
                 <div class="card-body">
                     <form action="bisection.php" method="GET" class="font-monospace">
                         <div class="form-group">

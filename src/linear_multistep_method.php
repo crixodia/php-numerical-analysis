@@ -21,32 +21,12 @@
     <div class="pattern"></div>
     <div class="container">
 
-        <div class="container about pdtop" style="max-width: 800px;">
-            <div class="row">
-                <div class="col-auto profile-picture pdbot">
-                    <img name="profile-picture-img" src="assets/EPN.png" width="150px">
-                </div>
-                <div class="col-lg text-center">
-                    <h5>Escuela Politécnica Nacional</h5>
-                    <h6>Facultad de Ingeniería en Sistemas</h6>
-                    <h6>Ingeniería en Ciencias de la Computación</h6>
-                    <br>
-                    <p class="text-justify">
-                        <b>Nombre: </b>Cristian Bastidas
-                    </p>
-                    <p class="text-justify">
-                        <b>Asignatura: </b> Métodos Numéricos
-                    </p>
-                </div>
-            </div>
-        </div>
-
         <div class="container pdtop maxwidth-900">
             <div class="accordion" id="accordion_' . $i . '">
                 <div class="card bg-light">
-                    <h5 class="card-header" style="background-color: #e7f1ff;">EDO Método de múltiples pasos</h5>
+                <h5 class="card-header" style="background-color: #e7f1ff;"><a href="index.php"><img src="assets/left.png" width="24px"></a> EDO Método de múltiples pasos</h5>
                     <div class="card-body">
-                        <form action="index.php" enctype="multipart/form-data" method="GET" class="font-monospace">
+                        <form action="linear_multistep_method.php" enctype="multipart/form-data" method="GET" class="font-monospace">
                             <div class="form-group">
                                 <div class="row">
                                     <label class="col-auto col-form-label" for="punto_interes">Función</label>
@@ -187,7 +167,9 @@
             ?>
         </div>
     </div>
-    <h6 class="text-center text-muted pdtop">Cristian Bastidas - EDO: Método de Múltiples Pasos</h6>
+    <br>
+    <h6 class="text-center text-muted"><a href="https://github.com/crixodia?tab=repositories" target="_blank">Cristian Bastidas</a></h6>
+    <br>
 </body>
 
 </html>

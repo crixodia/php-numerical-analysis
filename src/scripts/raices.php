@@ -233,6 +233,36 @@ function interval_secante_bisect($f, float $a, float $b, int $n, float $toleranc
     return $data;
 }
 
+function aproximaciones_sucesivas($f, float $a, float $tolerance = 1e-15)
+{
+    $x_next = $a;
+    $k = 0;
+    $table = array();
+    do {
+        $x_last = $x_next;
+        $x_next = $x_last + $f($x_last);
+        $table[] = array($k, $x_last, $f($x_last), $x_next, $f($x_next));
+        $k++;
+    } while (abs($x_next - $x_last) > $tolerance);
+    return $table;
+}
+
+function interval_aproximaciones_sucesivas($f, float $a, float $b, int $n, float $tolerance = 1e-15)
+{
+    //Obtiene n intervalos entre a y b
+    $intervals = get_intervals($a, $b, $n);
+
+    $data = array();
+    foreach ($intervals as $interval) {
+        //echo implode(",", $interval) . "\n";
+        list($a, $b) = $interval;
+        $aproximaciones_sucesivas = aproximaciones_sucesivas($f, ($a + $b) / 2, $tolerance);
+        $data[] = array($interval, $aproximaciones_sucesivas);
+    }
+    return $data;
+}
+
+
 /**
  * TESTS
  */

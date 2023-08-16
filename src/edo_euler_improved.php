@@ -20,33 +20,12 @@
 
     <div class="pattern"></div>
     <div class="container">
-
-        <div class="container about pdtop" style="max-width: 800px;">
-            <div class="row">
-                <div class="col-auto profile-picture pdbot">
-                    <img name="profile-picture-img" src="assets/EPN.png" width="150px">
-                </div>
-                <div class="col-lg text-center">
-                    <h5>Escuela Politécnica Nacional</h5>
-                    <h6>Facultad de Ingeniería en Sistemas</h6>
-                    <h6>Ingeniería en Ciencias de la Computación</h6>
-                    <br>
-                    <p class="text-justify">
-                        <b>Nombre: </b>Cristian Bastidas
-                    </p>
-                    <p class="text-justify">
-                        <b>Asignatura: </b> Métodos Numéricos
-                    </p>
-                </div>
-            </div>
-        </div>
-
         <div class="container pdtop maxwidth-900">
             <div class="accordion" id="accordion_' . $i . '">
                 <div class="card bg-light">
-                    <h5 class="card-header" style="background-color: #e7f1ff;">EDO Euler Mejorado</h5>
+                    <h5 class="card-header" style="background-color: #e7f1ff;"><a href="index.php"><img src="assets/left.png" width="24px"></a> EDO Euler Mejorado</h5>
                     <div class="card-body">
-                        <form action="index.php" enctype="multipart/form-data" method="GET" class="font-monospace">
+                        <form action="edo_euler_improved.php" enctype="multipart/form-data" method="GET" class="font-monospace">
                             <div class="form-group">
                                 <div class="row">
                                     <label class="col-auto col-form-label" for="punto_interes">Función</label>
@@ -137,21 +116,22 @@
         <div class="container pdtop text-break maxwidth-900">
 
             <?php
-            include('scripts/edo_euler.php');
-            list($x, $y, $a, $b, $n, $f) = array($_GET["x_init"], $_GET["y_init"], $_GET["limite_a"], $_GET["limite_b"], $_GET["n_inicial"], build_xy_function($_GET["funcion"]));
-            list($ans_x, $ans_y) = edo_euler_improved($x, $y, ($b - $a) / $n, $n, $f);
-            $header = array('i', 'x_i', 'y_i')
+            if (!empty($_GET["funcion"])) {
+                include('scripts/edo_euler.php');
+                list($x, $y, $a, $b, $n, $f) = array($_GET["x_init"], $_GET["y_init"], $_GET["limite_a"], $_GET["limite_b"], $_GET["n_inicial"], build_xy_function($_GET["funcion"]));
+                list($ans_x, $ans_y) = edo_euler_improved($x, $y, ($b - $a) / $n, $n, $f);
+                $header = array('i', 'x_i', 'y_i')
             ?>
 
-            <div class="pdbot">
-                <table class="table container table-light table-hover table-bordered font-monospace">
-                    <thead>
-                        <?php
-                        for ($i = 0; $i < count($header); $i++) {
-                            echo "<th scope='col' class='text-center table-primary'>\(" . $header[$i] . "\)</th>";
-                        }
-                        ?>
-                    </thead>
+                <div class="pdbot">
+                    <table class="table container table-light table-hover table-bordered font-monospace">
+                        <thead>
+                            <?php
+                            for ($i = 0; $i < count($header); $i++) {
+                                echo "<th scope='col' class='text-center table-primary'>\(" . $header[$i] . "\)</th>";
+                            }
+                            ?>
+                        </thead>
                     <?php
                     for ($i = 0; $i < count($ans_x); $i++) {
                         echo "<tr>";
@@ -162,11 +142,14 @@
                     echo "</tr>";
 
                     echo "</table>";
+                }
                     ?>
-            </div>
+                </div>
         </div>
     </div>
-    <h6 class="text-center text-muted pdtop">Cristian Bastidas - Tarea 18</h6>
+    <br>
+    <h6 class="text-center text-muted"><a href="https://github.com/crixodia?tab=repositories" target="_blank">Cristian Bastidas</a></h6>
+    <br>
 </body>
 
 </html>
